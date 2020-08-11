@@ -49,7 +49,7 @@ class Dakota(CMakePackage):
     depends_on('python')
 
     #Boost >1.69 not supported.
-    depends_on('boost')
+    depends_on('boost@:1.69.0')
 
     depends_on('cmake@2.8.9:', type='build')
     depends_on('hdf5', when='+hdf5')
@@ -71,4 +71,4 @@ class Dakota(CMakePackage):
         if '+hdf5' in spec:
             args.extend(['DAKOTA_HAVE_HDF5:BOOL=ON'])
 
-    return args
+        return args
