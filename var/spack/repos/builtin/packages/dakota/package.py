@@ -48,7 +48,7 @@ class Dakota(CMakePackage):
 
     depends_on('python')
 
-    #Boost >1.69 not supported.
+    # Boost >1.69 not supported.
     depends_on('boost@:1.69.0')
 
     depends_on('cmake@2.8.9:', type='build')
